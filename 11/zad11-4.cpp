@@ -3,29 +3,27 @@
 #define CONST 11
 using namespace std;
 
+void wskaznik(char *znak1, char znak2, int i){
+	if(*znak1== znak2){
+		cout<<"Znak znaleziono na pozycji: "<<i<<endl;
+	}
+}
 
 int main(){
-	char a;
 	char tab[CONST];
+	char litera;
+	int i=0;
 	
-	cout<<"Jakiego znaku szukasz?: ";
-		cin>>a;
+	cout<<"Wprowadz lancuch: "<<endl;
+		char *wsk = gets(tab);
+	cout<<"Wprowadz szukany znak: "<<endl;
+		cin>>litera;
 	
-	cout<<"Wprowadz lancuch: ";
-		for(int i=0; i<CONST; i++){
-			tab[i]=getchar();
-		}
-		
-	if(char* ch=strchr(tab, a)){
-		cout<< ch - tab<<endl;
+	while(*wsk != '\0'){
+		wskaznik(wsk, litera, i);
+		wsk++;
+		i++;
 	}
-	else{
-		return 0;
-	}
-	
-
-
-	
 	
 	return 0;
 }

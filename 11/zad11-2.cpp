@@ -1,27 +1,28 @@
 #include<iostream>
-#include<string>
+#include<cstdio>
+#define CONST 11
 
 using namespace std;
 
-void znaki2(int x){
-	cout<<"Wprowadz lanuch: ";
-	string slowo;	
+void znaki2(char *tab, int n){
+	int i=0;
+	char znak;
+	while((znak=getchar()) && !isspace(znak) && i<n){
+		tab[i]=znak;
+		i++;
+	}
 	
-		cin>>slowo;
-	
-	for(int i=0; i<x; i++){
-		cout<<slowo[i];
+	for(int j=0; j<i; j++){
+		cout<<tab[j];
 	}
 	cout<<endl;
 }
 
 int main(){
 	
-	int a;
-	cout<<"Ile znakow max ma miec lancuch?: ";
-		cin>>a;
 
-	znaki2(a);
+	char tablica[CONST];
+	znaki2(tablica, CONST);
 	
 	return 0;
 }

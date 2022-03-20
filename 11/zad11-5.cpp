@@ -1,37 +1,36 @@
 #include<iostream>
-#include<cstring>
+#define CONST 11
 
 using namespace std;
 
-void zawiera(int a, char znak){
-	char tab[a];
-	for(int i=0; i<a; i++){
-		tab[i]=getchar();
+int zawiera(char *tab, char znak){
+	int i=0;
+	while(*tab != '\0'){
+		if(*tab == znak){
+			i++;
+		}
+		
+		*tab++;
 	}
 	
-	bool check;
-	
-	if(char* ch=strchr(tab, znak)){
-		check=true;
+	if(i==0){
+		return 0;
 	}
 	else{
-		check=false;
+		return 1;
 	}
-	
-	cout<<check;
 }
 
 int main(){
+	char tab[CONST];
 	char znak;
-	int x;
 	
-	cout<<"Podaj dlugosc tablicy: ";
-		cin>>x;
+	cout<<"Wprowadz lancuch: ";
+		gets(tab);
 	cout<<"Wprowadz szukany znak: ";
 		cin>>znak;
-	cout<<"Wprowadz lancuch: ";
 	
-	zawiera(x, znak);
+	cout<<zawiera(tab, znak)<<endl;
 	
 	return 0;
 }

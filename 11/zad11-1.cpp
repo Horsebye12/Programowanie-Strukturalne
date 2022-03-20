@@ -3,16 +3,12 @@
 using namespace std;
 
 void znaki(int x){
-	char tab[x];
+	int i=0;
+	char znak;
 	
-	for(int i=0; i<=x; i++){
-		tab[i]=getchar();
+	while(scanf("%c", &znak) != 0 && i<x){
+		i++;
 	}
-	
-	for(int i=0; i<=x; i++){
-		cout<<tab[i];
-	}
-	cout<<endl;
 	
 }
 
