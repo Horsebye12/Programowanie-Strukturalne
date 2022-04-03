@@ -1,0 +1,4 @@
+10 Mariusz Pudzianowski 20 19 6 15
+12 Mariusz Pudzian 54 23 9 3
+14 Mariusz Pudzianoski 83 12 75 8
+10 Mariusz Pudzianowski 256 12 7 54
